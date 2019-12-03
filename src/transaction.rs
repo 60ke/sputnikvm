@@ -19,7 +19,7 @@ use super::{State, Machine, Context, ContextVM, VM, AccountState,
             BlockhashState, Patch, HeaderParams, Memory, VMStatus,
             AccountCommitment, Log, AccountChange,
             Instruction, Opcode};
-use eval::{Account,WriteSet,ReadSet,Storage_Data};
+use eval::{WriteSet,ReadSet};
 use block_core::TransactionAction;
 #[cfg(feature = "std")]
 use block::Transaction;

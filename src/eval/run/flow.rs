@@ -1,13 +1,13 @@
 //! Flow control instructions.
 
 use ::Memory;
-use bigint::{U256, M256,Gas};
-use eval::{State,Account,WriteSet,ReadSet,Storage_Data};
+use bigint::{U256, M256};
+use eval::{State,Account,Storage_Data};
 use patch::Patch;
 extern crate sgx_tstd as std;
 use std::println;
 use std::collections::HashMap;
-use std::string::{String, ToString};
+use std::string::ToString;
 pub fn sload<M: Memory + Default, P: Patch>(state: &mut State<M, P>) {
     pop!(state, index: U256);
     let value = state.account_state.storage_read(state.context.address, index).unwrap();
